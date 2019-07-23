@@ -63,38 +63,28 @@
 // This function determines if the input (n) is a prime number, because it returns true only if it is not divisible by any other number than itself or 1
 //
 //
-// 11. Tower of Hanoi
-
-// function TOH(num, source, temp, destination) {
-//   if (num === 1) {
-//     print(source, destination)
-//     return
-//   }
-//   if (num < 1) {
-//     console.log('Number must be 1 or greater');
-//     return
-//   }
-//   // source A
-//   // temp B
-//   // destination C
-//   print(source, temp)
-//   TOH(num, source, destination, temp)
-//   print(source, destination)
-//   TOH(num, )
-//   // TOH(num - 1, source, destination, temp)
 //
+// 11. Tower of Hanoi
+//
+//
+// function toh(n, src, dst, tmp) {
+//   if(n === 1) {
+//     console.log(`Move from ${src} to ${dst}`);
+//   } else {
+//     toh(n-1, src, tmp, dst);
+//     toh(1, src, dst, tmp);
+//     toh(n-1, tmp, dst, src);
+//   }
 // }
-// function print(source, destination) {
-//   console.log(`Moved from ${source} to ${destination}`);
-// }
-// TOH(3, 'A', 'B', 'C')
-
-
+//
+// toh(3, 'A', 'C', 'B');
+//
+//
 // 12. Iterative Versions
-
+//
 // function countingSheep(num) {
 //   let x = num
-
+//
 //   do {
 //     if (x === 0) {
 //       console.log(`All sheep jumped over the fence`);
@@ -103,12 +93,12 @@
 //     console.log(`${x}: Another sheep jumped over the fence`);
 //     x--;
 //   } while (x >= 0);
-
+//
 // }
 // countingSheep(5)
-
+//
 // Iterative: Linear time O(n). Runs proportional to the size of the input
-
+//
 // function powerCalculator(base, exponent) {
 //   if (exponent < 0) {
 //     console.log('The exponent should be equal to or larger than 0');
@@ -126,7 +116,7 @@
 // console.log(powerCalculator(2, 3))
 //
 // Linear time O(n). The running time is proportional to the size of the 'exponent' input
-
+//
 // function reverseString(string) {
 //   let newString = ''
 //   for (var i = 0; i < string.length; i++) {
@@ -135,23 +125,23 @@
 //   return newString
 // }
 // console.log(reverseString('Hi Tauhida'))
-
+//
 // Iterative: Linear time 0(n). The running time is proportional to the string length
-
-
+//
+//
 // function triangularNumber(n) {
 //   let triNum= n;
-
+//
 //   for(let i=1; i<n; i++){
 //     triNum += n-i;
 //   }
 //   return triNum;
 // }
-
+//
 // console.log(triangularNumber(4));
-
+//
 // Iterative: Linear time 0(n). The running time is proportional to the string length
-
+//
 // function stringSplitter(string, separator){
 //   let newString = '';
 //   for(let i=0; i<string.length; i++){
@@ -161,11 +151,24 @@
 //   }
 //   return newString;
 // }
-
+//
 // console.log(stringSplitter('abcd,ac,bdadc,sa', ','));
 
+// Just in case we wanted to split on a multi-character seprator:
+//
+// function stringSplitter(string, separator){
+//    let newStringArray = string.split(separator)
+//    let newString = ''
+//    for(let i=0; i<newStringArray.length; i++){
+//      newString += newStringArray[i]
+//    }
+//    return newString;
+//  }
+//
+//  console.log(stringSplitter('abcd,ac,sabdadc,sa', 'sa'));
+//
 // Iterative: Linear time 0(n). The running time is proportional to the string length
-
+//
 // function fibonacci(num) {
 //   let result = [];
 //   for (let i = 1; i <= num; i++) {
@@ -181,21 +184,20 @@
 //   }
 //   return result;
 // }
-
+//
 // console.log(fibonacci(11));
 // Iterative: Linear time 0(n). The running time is proportional to the string length
-
+//
 // function factorial(num){
 //   let factNum = num;
-
+//
 //   for (let i=1; i < num; i++){
 //     factNum *= (num - i);
 //   }
-
+//
 //   return factNum;
 // }
-
+//
 // console.log(factorial(5));
-
+//
 // Iterative: Linear time 0(n). The running time is proportional to the string length
-
