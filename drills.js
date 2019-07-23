@@ -1,3 +1,4 @@
+'use strict';
 // 1. Dog Playmate
 //
 //  1) O(1) because someone responds and we are not searching one by one.
@@ -93,7 +94,7 @@
 
 // function countingSheep(num) {
 //   let x = num
-//
+
 //   do {
 //     if (x === 0) {
 //       console.log(`All sheep jumped over the fence`);
@@ -102,7 +103,7 @@
 //     console.log(`${x}: Another sheep jumped over the fence`);
 //     x--;
 //   } while (x >= 0);
-//
+
 // }
 // countingSheep(5)
 
@@ -137,6 +138,64 @@
 
 // Iterative: Linear time 0(n). The running time is proportional to the string length
 
-function triangularNumber(n) {
-  
-}
+
+// function triangularNumber(n) {
+//   let triNum= n;
+
+//   for(let i=1; i<n; i++){
+//     triNum += n-i;
+//   }
+//   return triNum;
+// }
+
+// console.log(triangularNumber(4));
+
+// Iterative: Linear time 0(n). The running time is proportional to the string length
+
+// function stringSplitter(string, separator){
+//   let newString = '';
+//   for(let i=0; i<string.length; i++){
+//     if(string[i] !== separator){
+//       newString += string[i];
+//     }
+//   }
+//   return newString;
+// }
+
+// console.log(stringSplitter('abcd,ac,bdadc,sa', ','));
+
+// Iterative: Linear time 0(n). The running time is proportional to the string length
+
+// function fibonacci(num) {
+//   let result = [];
+//   for (let i = 1; i <= num; i++) {
+//     if (i === 1) {
+//         result.push(1);
+//     }
+//     else if (i == 2) {
+//         result.push(1);
+//     }
+//     else {
+//         result.push(result[i - 2] + result[i - 3]);
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(fibonacci(11));
+// Iterative: Linear time 0(n). The running time is proportional to the string length
+
+// function factorial(num){
+//   let factNum = num;
+
+//   for (let i=1; i < num; i++){
+//     factNum *= (num - i);
+//   }
+
+//   return factNum;
+// }
+
+// console.log(factorial(5));
+
+// Iterative: Linear time 0(n). The running time is proportional to the string length
+
